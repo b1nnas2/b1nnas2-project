@@ -15,20 +15,29 @@
         body {
             margin: 0; padding: 0;
             background-color: var(--bg-color);
-            height: 100vh; display: flex;
-            flex-direction: column; justify-content: flex-end;
-            overflow: hidden; font-family: 'Pretendard', sans-serif;
+            height: 100vh; 
+            display: flex;
+            flex-direction: column; 
+            justify-content: flex-end;
+            overflow: hidden; 
+            font-family: 'Pretendard', sans-serif;
         }
 
         /* 중앙 가이드 문구 - 사라지지 않고 항상 유지 */
         #intro-guide {
-            position: absolute; top: 18%; left: 50%;
+            position: absolute; 
+            top: 18%; 
+            left: 50%;
             transform: translate(-50%, -50%);
-            text-align: center; z-index: 100; pointer-events: none;
+            text-align: center; 
+            z-index: 100; 
+            pointer-events: none;
         }
 
         #intro-guide h1 {
-            font-weight: 200; letter-spacing: 20px; font-size: 3rem;
+            font-weight: 200; 
+            letter-spacing: 20px; 
+            font-size: 3rem;
             margin: 0; color: var(--accent-color);
             text-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
             transition: all 0.1s ease; /* 연주 시 반응을 위한 트랜지션 */
@@ -36,7 +45,9 @@
 
         #intro-guide p {
             color: rgba(255, 255, 255, 0.3);
-            letter-spacing: 5px; font-size: 0.9rem; margin-top: 15px;
+            letter-spacing: 5px; 
+            font-size: 0.9rem; 
+            margin-top: 15px;
         }
 
         /* 연주 중 텍스트가 반짝이는 효과 */
@@ -47,25 +58,42 @@
         }
 
         .piano-container {
-            display: flex; justify-content: center;
-            width: 100%; padding-bottom: 60px; 
+            display: flex; 
+            justify-content: center;
+            width: 100%; 
+            padding-bottom: 60px; 
             perspective: 1500px;
         }
 
         .key {
-            position: relative; width: 55px; height: 320px;
-            background: var(--key-white); border-radius: 0 0 8px 8px;
-            margin: 0 3px; cursor: pointer;
-            display: flex; align-items: flex-end; justify-content: center;
-            padding-bottom: 20px; font-size: 13px; font-weight: bold; color: #bbb;
+            position: relative; 
+            width: 55px; 
+            height: 320px;
+            background: var(--key-white); 
+            border-radius: 0 0 8px 8px;
+            margin: 0 3px; 
+            cursor: pointer;
+            display: flex; 
+            align-items: flex-end; 
+            justify-content: center;
+            padding-bottom: 20px; 
+            font-size: 13px; 
+            font-weight: bold; 
+            color: #bbb;
             transition: all 0.1s ease;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.6); user-select: none;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.6); 
+            user-select: none;
         }
 
         .key.black {
-            width: 38px; height: 200px; background: var(--key-black);
-            color: #555; margin-left: -22px; margin-right: -22px;
-            z-index: 5; border-radius: 0 0 5px 5px;
+            width: 38px; 
+            height: 200px; 
+            background: var(--key-black);
+            color: #555; 
+            margin-left: -22px; 
+            margin-right: -22px;
+            z-index: 5; 
+            border-radius: 0 0 5px 5px;
         }
 
         .key.active {
@@ -76,10 +104,15 @@
         }
 
         .key.active::after {
-            content: ""; position: absolute; bottom: 100%; left: 50%;
-            transform: translateX(-50%); width: 100%;
+            content: ""; 
+            position: absolute; 
+            bottom: 100%; 
+            left: 50%;
+            transform: translateX(-50%); 
+            width: 100%;
             background: linear-gradient(to top, var(--accent-color), transparent);
-            filter: blur(12px); animation: lightRay 0.7s ease-out forwards;
+            filter: blur(12px); 
+            animation: lightRay 0.7s ease-out forwards;
         }
 
         @keyframes lightRay {
@@ -88,9 +121,13 @@
         }
 
         .particle {
-            position: absolute; width: 5px; height: 5px;
-            background: var(--accent-color); border-radius: 50%;
-            pointer-events: none; box-shadow: 0 0 10px var(--accent-color);
+            position: absolute; 
+            width: 5px; 
+            height: 5px;
+            background: var(--accent-color); 
+            border-radius: 50%;
+            pointer-events: none; 
+            box-shadow: 0 0 10px var(--accent-color);
             animation: eleganceExplode 0.8s ease-out forwards;
         }
 
